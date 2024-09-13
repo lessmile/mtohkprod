@@ -1,0 +1,13 @@
+{
+    "name": "vendor/webhook",
+    "description": "Webhook module for Magento 2",
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "magento/framework": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vendor\\Webhook\\": "src/"
+        }
+    }
+}

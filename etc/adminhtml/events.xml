@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    
+    <!-- Sales order save after event -->
+    <event name="sales_order_save_after">
+        <observer name="dsers_order_webhook_observer_save" instance="Vendor\Webhook\Observer\OrderWebhookObserver" />
+    </event>
+
+    <event name="catalog_product_save_after">
+        <observer name="vendor_module_product_save_after" instance="Vendor\Webhook\Observer\ProductSaveAfter" />
+    </event>
+
+    <event name="catalog_product_delete_after">
+        <observer name="vendor_module_product_delete_observer" instance="Vendor\Webhook\Observer\ProductSaveAfter" />
+    </event>
+
+</config>
